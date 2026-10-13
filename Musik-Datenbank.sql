@@ -1,4 +1,4 @@
-CREATE TABLE Kenstler (
+CREATE TABLE Kuenstler (
     KuenstlerID INTEGER Primary Key,
     Name TEXT Not Null,
     Herkunftsland TEXT,
@@ -18,7 +18,7 @@ CREATE TABLE Alben(
     Titel TEXT Not Null,
     Jahr INTEGER,
     KuenstlerID INTEGER,
-    FOREIGN KEY (KuenstlerID) REFERENCES Kenstler(KuenstlerID)
+    FOREIGN KEY (KuenstlerID) REFERENCES Kuenstler(KuenstlerID)
 )
 
 CREATE TABLE beinhaltet(
