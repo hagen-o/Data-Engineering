@@ -1,2 +1,2 @@
-# Data-Engineering---bungen
+# Data-Engineering-Übungen
 Hochschulübungen zu Datenbanken und Data Engineering
