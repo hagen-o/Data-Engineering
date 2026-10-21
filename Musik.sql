@@ -4,14 +4,14 @@ CREATE TABLE Kuenstler (
     Herkunftsland TEXT,
     Website TEXT,
     Wikipedia TEXT
-)
+);
 
 CREATE TABLE Songs(
     SongID INTEGER Primary Key,
-    Name TEXT Not Null,
+    Titel TEXT Not Null,
     Zaehler INTEGER,
     Genre TEXT,
-)
+);
 
 CREATE TABLE Alben(
     AlbumID INTEGER Primary Key,
@@ -19,12 +19,13 @@ CREATE TABLE Alben(
     Jahr INTEGER,
     KuenstlerID INTEGER,
     FOREIGN KEY (KuenstlerID) REFERENCES Kuenstler(KuenstlerID)
-)
+);
 
-CREATE TABLE beinhaltet(
-    AlbumID INTEGER,
-    SongID INTEGER,
+CREATE TABLE beinhaltet (
+    AlbumID INTEGER NOT NULL,
+    SongID INTEGER NOT NULL,
+    Nummer INTEGER,
+    PRIMARY KEY (AlbumID, SongID),
     FOREIGN KEY (AlbumID) REFERENCES Alben(AlbumID),
-    FOREIGN KEY (SongID) REFERENCES Songs(SongID),
-    Nummer Integer
-)
+    FOREIGN KEY (SongID) REFERENCES Songs(SongID)
+);
